@@ -5,16 +5,16 @@ from selene.support.shared.jquery_style import s
 
 
 def test_decorator_steps():
-    open_main_page()
+    open_main_page('https://github.com')
     search_for_repository('eroshenkoam/allure-example')
     go_to_repository('eroshenkoam/allure-example')
     open_issue_tab()
     should_see_issue_with_number('#76')
 
 
-@allure.step("Открываем главную страницу")
-def open_main_page():
-    browser.open('https://github.com')
+@allure.step("Открываем главную страницу {url}")
+def open_main_page(url):
+    browser.open(url)
 
 
 @allure.step("Ищем репозиторий {repo}")
