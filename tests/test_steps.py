@@ -1,12 +1,11 @@
 import allure
-from selene import by, be
-from selene.support.shared import browser
+from selene import by, be, browser
 from selene.support.shared.jquery_style import s
 
 
 def test_github():
     with allure.step("Открываем главную страницу"):
-        browser.open('https://github.com')
+        browser.open('/')
 
     with allure.step("Ищем репозиторий"):
         s('.search-input').click()

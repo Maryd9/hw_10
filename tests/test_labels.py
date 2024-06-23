@@ -7,7 +7,7 @@ def test_dynamic_labels():
     allure.dynamic.severity(Severity.BLOCKER)
     allure.dynamic.feature("Задачи в репозитории")
     allure.dynamic.story("Неавторизованный пользователь не может создать задачу в репозитории")
-    allure.dynamic.link('https://github.com', name="Testing")
+    allure.dynamic.link('', name="Testing")
 
 
 @allure.tag("web")
@@ -15,6 +15,6 @@ def test_dynamic_labels():
 @allure.label("owner", "masha")
 @allure.feature("Задачи в репозитории")
 @allure.story("Авторизованный пользователь может создать задачу в репозитории")
-@allure.link('https://github.com', name="Testing")
+@allure.link('', name="Testing")
 def test_decorator_labels():
     pass
